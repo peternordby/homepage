@@ -1,0 +1,62 @@
+body {
+    background-color: azure;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.time-container {
+    margin-top: 10em;
+    margin-bottom: 2em;
+}
+
+.link-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    text-align: center;
+}
+
+.fa, .fa-brands {
+    line-height: 1.1em;
+    height: 1.1em;
+    width: 1.1em;
+    margin: 0.2em;
+    border-radius: 50%;
+    padding: 0.3em;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+}
+
+.fa:hover, .fa-brands:hover {
+    opacity: 0.7;
+}
+
+.fa-n {
+    color: black;
+    background-color: #F7F6F3;
+}
+
+.fa-calendar-days {
+    background-color: #4285F4;
+}
+
+.fa-youtube {
+    background-color: #FF0000;
+}
+
+.fa-envelope {
+    background-color: #0078D4;
+}
