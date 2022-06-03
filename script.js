@@ -124,3 +124,30 @@ inputField.addEventListener("keyup", function (event) {
 });
 
 showTodos();
+
+searchbar = document.getElementById("searchinput")
+
+searchbar.focus();
+
+const questions = [
+    "Hvordan få A i Matte 4?",
+    "Hvor langt er det til månen?",
+    "Hvor mye veier en dinosaur?",
+    "Hvem er kongen i Spania?",
+    "Hva heter du?",
+    "Hvilken vei er Mekka?",
+    "Dondé esta la biblioteca?",
+    "Kan man spise marsvin?",
+    "Hvor mange maur finnes det?",
+    "Finnes det liv i verdensrommet?",
+    "Hvor mange sesonger av friends er det?",
+    "Hva koster et menneskeben?",
+    "Er det langt til Australia?",
+]
+
+let i = 0;
+setInterval(() => {
+    let newQuestion = questions[i]; 
+    i = (i + 1) % questions.length;
+    searchbar.placeholder = newQuestion;
+}, 10000);
