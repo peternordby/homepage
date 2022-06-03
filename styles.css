@@ -1,5 +1,13 @@
 body {
-    background-color: azure;
+    background-color: #1b2e2e;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h4 {
+    margin: auto;
+    line-height: normal;
+    color: #a2a2a2;
 }
 
 .container {
@@ -11,24 +19,37 @@ body {
 
 .time-container {
     margin-top: 10em;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
+}
+
+.time {
+    pointer-events: none;
+}
+
+.sections {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    height: 20em;
 }
 
 .link-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 1em;
+    gap: 1.5em;
 }
 
-h4 {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
-    text-align: center;
+.link-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
 
 .fa, .fa-brands {
-    line-height: 1.1em;
+    line-height: 1.1;
     height: 1.1em;
     width: 1.1em;
     margin: 0.2em;
@@ -38,13 +59,16 @@ h4 {
     text-decoration: none;
     color: white;
     background-color: blue;
+    transition: transform 0.2s ease;
 }
 
 .fa:hover, .fa-brands:hover {
     opacity: 0.7;
+    transform: scale(1.1);
 }
 
-.fa-n {
+.fa-notion {
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
     color: black;
     background-color: #F7F6F3;
 }
@@ -59,4 +83,116 @@ h4 {
 
 .fa-envelope {
     background-color: #0078D4;
+}
+
+.fa-google-drive {
+    background-color: #FBBC04;
+}
+
+.fa-microsoft {
+    background-color: #00509E;
+}
+
+.fa-github {
+    background-color: #161B22;
+}
+
+.fa-pen {
+    background-color: #F19800;
+}
+
+/*TODO*/
+
+.todo-container {
+    background-color: #F7F6F3;
+    border-radius: 10px;
+    height: inherit;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    margin: 0.5em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 0.5em;
+    font-size: 16px;
+    transition: 0.2s;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:hover {
+    background: #ddd;
+}
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.5em;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+*:focus {
+    outline: none;
 }
