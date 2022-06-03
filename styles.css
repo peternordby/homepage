@@ -5,8 +5,7 @@ body {
 }
 
 h4 {
-    margin: auto;
-    line-height: normal;
+    margin: 0.75em 0;
     color: #a2a2a2;
 }
 
@@ -47,57 +46,65 @@ h4 {
     flex-direction: column;
 }
 
-
-.fa, .fa-brands {
-    line-height: 1.1 !important;
-    height: 1.1em;
-    width: 1.1em;
-    margin: 0.2em;
+.link-anchor {
+    height: 4em;
+    width: 4em;
     border-radius: 50%;
-    padding: 0.3em;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background-color: blue;
+    padding: 0.5em;
+    overflow: hidden;
     transition: transform 0.2s ease;
+    position: relative;
 }
 
-.fa:hover, .fa-brands:hover {
-    opacity: 0.7;
-    transform: scale(1.1);
+.fa, .fa-brands {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: white;
+}
+
+.link-anchor:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
 }
 
 .fa-notion {
     font-family: Georgia, 'Times New Roman', Times, serif !important;
     color: black;
+}
+
+.notion {
     background-color: #F7F6F3;
 }
 
-.fa-calendar-days {
+.calendar {
     background-color: #4285F4;
 }
 
-.fa-youtube {
+.youtube {
     background-color: #FF0000;
 }
 
-.fa-envelope {
+.mail {
     background-color: #0078D4;
 }
 
-.fa-google-drive {
+.drive {
     background-color: #FBBC04;
 }
 
-.fa-microsoft {
+.ntnumail {
     background-color: #00509E;
 }
 
-.fa-github {
+.github {
     background-color: #161B22;
 }
 
-.fa-pen {
+.blackboard {
     background-color: #F19800;
 }
 
