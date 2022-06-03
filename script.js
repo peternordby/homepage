@@ -66,7 +66,9 @@ function addToList() {
     } else {
         todoList = [];
     }
-    todoList.push(document.getElementById("myInput").value)
+    if (document.getElementById("myInput").value.trim() !== "") {
+        todoList.push(document.getElementById("myInput").value)
+    }
     document.getElementById("myInput").value = ""
     localStorage.setItem("Todo", JSON.stringify(todoList))
     showTodos();
